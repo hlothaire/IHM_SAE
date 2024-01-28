@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Nouvelle intervention</title>
+    <link type="text/css" rel="stylesheet" href="./css/sat.css" />
+    <link type="text/css" rel="stylesheet" href="./css/intervention_edit.css" />
+  </head>
+  <body>
+    <div id="div_intervention_titre" class="divtitre">Détail intervention</div>
+    <div id="div_intervention_detail">
+      <div class="intervention_rubrique">
+        <div>
+          <span class="labeltitre">IDENTIFICATION</span>
+        </div>
+        <div>
+          <label for="edt_intervention_num">numéro</label>
+          <span><input id="edt_intervention_num" size="5" type="text" /></span>
+          <span><input id="edt_intervention_date" size="9" type="date" /></span>
+        </div>
+        <div>
+          <label for="intervention_motif">motif</label>
+          <span><textarea id="intervention_motif" sie="10"></textarea></span>
+          <label for="intervention_obs">observation</label>
+          <span><textarea id="intervention_obs" sie="10"></textarea></span>
+        </div>
+      </div>
+      <div class="intervention_rubrique">
+        <div>
+          <span class="labeltitre">Contrat</span>
+          <label id="lbl_erreur_contrat" class="labelerreur"></label>
+        </div>
+        <div>
+          <label for="edt_intervention_numcontrat">numéro</label>
+          <span
+            ><input id="edt_intervention_numcontrat" size="5" type="text"
+          /></span>
+          <label id="lbl_intervention_site" class="intervention_commentaire"
+            >testsite</label
+          >
+          <label id="lbl_intervention_client" class="intervention_commentaire"
+            >testclient</label
+          >
+        </div>
+      </div>
+      <div class="internvetion_rubrique">
+        <div>
+          <span class="labeltitre">PRESTATIONS</span>
+          <label id="lbl_erreur_presta" class="labelerreur"></label>
+        </div>
+      </div>
+      <div class="intervention_sousrubrique">
+        <div id="div_intervention_presta">
+          <div class="divtitre">Totaux HT TVA TTC</div>
+          <table id="table_presta">
+            <thead>
+              <tr>
+                <th>code</th>
+                <th>libellé</th>
+                <th>PUHT</th>
+                <th>quantité</th>
+                <th>montant</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <div class="divaction">
+            <input
+              id="btn_intervention_ajouter"
+              type="button"
+              value="Ajouter"
+            />
+          </div>
+        </div>
+        <div id="div_intervention_presta_edit">
+          <div class="divtitre">Choisir une préstation dans la liste</div>
+          <div class="prestation_rubrique">
+            <div>
+              <select id="select_presta" size="6"></select>
+              <div>
+                <label id="lbl_erreur_select l" class="labelerreur"></label>
+              </div>
+            </div>
+            <div>
+              <label for="edt_presta_qte">quantité</label>
+              <span><input id="edt_presta_qte" size="5" type="text" /></span>
+              <div><label id="lbl_erreur_qte" class="labelerreur"></label></div>
+              <div>
+                <input id="btn_presta_valider" type="button" />
+                <input id="btn_presta_annuler" type="button" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divaction">
+        <input
+          id="btn_intervention_retour"
+          class="btnretour"
+          value="Retour"
+          type="button"
+        />
+        <input
+          id="btn_intervention_valider"
+          class="btnvalider"
+          value="Valider"
+          type="button"
+        />
+        <input
+          id="btn_intervention_annuler"
+          class="btnannuler"
+          value="Annuler"
+          type="button"
+        />
+      </div>
+    </div>
+  </body>
+  <script type="module" src="../controleur/intervention_edit.js"></script>
+</html>
