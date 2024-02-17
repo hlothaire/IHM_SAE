@@ -1,4 +1,4 @@
-import { vueInterventionListe } from "./class_intervention_liste";
+import { vueInterventionListe } from "../controleur/class_intervention_liste.js";
 
 vueInterventionListe.init({
   divTitre: document.querySelector("[id=divtitre]"),

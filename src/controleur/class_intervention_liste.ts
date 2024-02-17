@@ -1,7 +1,6 @@
 import {
   UnIntervention,
   LesInterventions,
-  TInterventions,
 } from "../modele/data_intervention.js";
 import { LesContrats } from "../modele/data_contrat.js";
 import { LesClients } from "../modele/data_client.js";
@@ -35,7 +34,7 @@ class VueInterventionListe {
 
       let balisea: HTMLAnchorElement;
       balisea = document.createElement("a");
-      balisea.classList.add("ressources/visu");
+      balisea.classList.add("img_visu");
       balisea.onclick = function (): void {
         vueInterventionListe.detailInterventionClick(uneIntervention.numInterv);
       };
@@ -50,16 +49,16 @@ class VueInterventionListe {
       ).numCli;
       tr.insertCell().textContent = lesPrestationsByIntervention
         .getTotal(lesPrestationsByIntervention.byNumInterv(num))
-        .toFixed(0);
+        .toFixed(2) + " €";
 
       balisea = document.createElement("a");
-      balisea.classList.add("ressources/modifications");
+      balisea.classList.add("img_modification");
       balisea.onclick = function (): void {
         vueInterventionListe.modifierInterventionClick(uneIntervention.numCont);
       };
       tr.insertCell().appendChild(balisea);
       balisea = document.createElement("a");
-      balisea.classList.add("ressources/corbeille");
+      balisea.classList.add("img_corbeille");
       balisea.onclick = function (): void {
         vueInterventionListe.supprimerInterventionClick(
           uneIntervention.numCont,
@@ -73,19 +72,19 @@ class VueInterventionListe {
   }
 
   detailInterventionClick(num: string): void {
-    location.href = "intervention_liste.html?affi&" + encodeURIComponent(num);
+    location.href = "intervention_edit.html?affi&" + encodeURIComponent(num);
   }
 
   modifierInterventionClick(num: string): void {
-    location.href = "intervention_liste.html?modif&" + encodeURIComponent(num);
+    location.href = "intervention_edit.html?modif&" + encodeURIComponent(num);
   }
 
   supprimerInterventionClick(num: string): void {
-    location.href = "intervention_liste.html?suppr&" + encodeURIComponent(num);
+    location.href = "intervention_edit.html?suppr&" + encodeURIComponent(num);
   }
 
   ajouterInterventionClick(): void {
-    location.href = "intervention_liste.html?ajout";
+    location.href = "intervention_edit.html?ajout";
   }
 }
 
