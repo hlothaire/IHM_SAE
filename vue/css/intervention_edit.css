@@ -14,7 +14,7 @@
 }
 
 .intervention_rubrique div:nth-child(3) {
-  grid-template-columns: 1fr 3fr 1fr 3fr; /* Adjust if needed */
+  grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
 }
 
 .intervention_sousrubrique {

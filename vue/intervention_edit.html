@@ -21,6 +21,7 @@
         <div>
           <label for="intervention_motif">motif</label>
           <span><textarea id="intervention_motif"></textarea></span>
+          <label id="lbl_erreur_motif" for="intervention_motif"></label>
           <label for="intervention_obs">observation</label>
           <span><textarea id="intervention_obs"></textarea></span>
         </div>
@@ -37,10 +38,10 @@
           /></span>
           <div class="site_client">
             <label id="lbl_intervention_site" class="intervention_commentaire"
-              >testsite</label
+              > </label
             >
             <label id="lbl_intervention_client" class="intervention_commentaire"
-              >testclient</label
+              > </label
             >
           </div>
         </div>
@@ -53,7 +54,10 @@
       </div>
       <div class="intervention_sousrubrique">
         <div id="div_intervention_presta">
-          <div class="divtitre">Totaux HT TVA TTC</div>
+          <div class="divtitre">
+            Totaux 
+            <label id="lbl_prestation_total"> </label>
+          </div>
           <table id="table_presta">
             <thead>
               <tr>
